@@ -63,7 +63,7 @@ API Callable
 --------
 
 **/runPM/**
-
+--------
 * @get: return all previously submitted predictive model
 * @post: upload training dataset and build predictive model based on AutoML approach
 *parameter:*
@@ -72,14 +72,14 @@ API Callable
 	* nModel = 1 (default 1)
 	* maxRuntime = 300 (default 60)
 
---------
-**/pm/<uid>** 
 
+**/pm/<uid>** 
+--------
 * @get: display the result of the submitted PM
 
---------
-**/pmdata/<uid>**
 
+**/pmdata/<uid>**
+--------
 * @get: display dataset detail
 * @post: submit test dataset
 *parameter:*
