@@ -39,7 +39,7 @@ Submit PM Job given the dataset - return 2 top predictive model and set the auto
 
 :: 
 
-curl -X POST -F "file=@/path/to/file_train.csv" -F "uid=12345" -F "nModel=2" -F "maxRuntime=300" http://localhost:8000/runPM/
+	curl -X POST -F "file=@/path/to/file_train.csv" -F "uid=12345" -F "nModel=2" -F "maxRuntime=300" http://localhost:8000/runPM/
 
 
 
@@ -47,7 +47,7 @@ Get the result PM result from submitted uid
 
 ::
 
-curl -X GET http://localhost:8000/pm/12345/
+	curl -X GET http://localhost:8000/pm/12345/
 
 
 
@@ -55,34 +55,34 @@ Upload Test dataset
 
 ::
 
-curl -X POST -F "file=@/path/to/file_test.csv" http://localhost:8000/pmdata/12345/
+	curl -X POST -F "file=@/path/to/file_test.csv" http://localhost:8000/pmdata/12345/
 
 
 
 API Callable
 --------
 
-**/runPM/**  
+/runPM/
 
 * @get: return all previously submitted predictive model
 * @post: upload training dataset and build predictive model based on AutoML approach
-parameter:
+**parameter:**
   * uid = unique identification
   * file = path to file
   * nModel = 1 (default 1)
   * maxRuntime = 300 (default 60)
 
 
-**/pm/<uid>**  
+/pm/<uid> 
 
 * @get: display the result of the submitted PM
 
 
-**/pmdata/<uid>** 
+/pmdata/<uid>
 
 * @get: display dataset detail
 * @post: submit test dataset
-parameter:
+**parameter:**
   * file = path to file (without "target" column)
 * @delete: remove dataset and the PM
 
