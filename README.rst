@@ -62,27 +62,27 @@ Upload Test dataset
 API Callable
 --------
 
-/runPM/
+**/runPM/**
 
 * @get: return all previously submitted predictive model
 * @post: upload training dataset and build predictive model based on AutoML approach
-**parameter:**
-  * uid = unique identification
-  * file = path to file
-  * nModel = 1 (default 1)
-  * maxRuntime = 300 (default 60)
+*parameter:*
+	* uid = unique identification
+	* file = path to file
+	* nModel = 1 (default 1)
+	* maxRuntime = 300 (default 60)
 
 
-/pm/<uid> 
+**/pm/<uid>** 
 
 * @get: display the result of the submitted PM
 
 
-/pmdata/<uid>
+**/pmdata/<uid>**
 
 * @get: display dataset detail
 * @post: submit test dataset
-**parameter:**
-  * file = path to file (without "target" column)
+*parameter:*
+	* file = path to file (without "target" column)
 * @delete: remove dataset and the PM
 
