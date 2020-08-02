@@ -72,12 +72,12 @@ API Callable
 	* nModel = 1 (default 1)
 	* maxRuntime = 300 (default 60)
 
-
+--------
 **/pm/<uid>** 
 
 * @get: display the result of the submitted PM
 
-
+--------
 **/pmdata/<uid>**
 
 * @get: display dataset detail
