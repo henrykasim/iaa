@@ -11,13 +11,22 @@ Features
 
 Starting the service
 --------
-Migrate core service database::
+Migrate core service database
+
+::
+
 	python manage.py migrate
 
-Migrate core service database::
+Migrate core service database
+
+::
+
 	python manage.py migrate core
 
-Start API service::
+Start API service
+
+::
+
 	python manage.py runserver localhost:8000
 
 
@@ -25,16 +34,23 @@ Start API service::
 Testing the API
 --------
 1. Submit PM Job given the dataset - return 2 top predictive model and set the automl runtime to 5 minutes (300 seconds)
-:: curl -X POST -F "file=@/path/to/file_train.csv" -F "uid=12345" -F "nModel=2" -F "maxRuntime=300" http://localhost:8000/runPM/
+
+:: 
+
+curl -X POST -F "file=@/path/to/file_train.csv" -F "uid=12345" -F "nModel=2" -F "maxRuntime=300" http://localhost:8000/runPM/
 
 
 2. Get the result PM result from submitted uid 
+
 ::
+
 curl -X GET http://localhost:8000/pm/12345/
 
 
 3. Upload Test dataset
+
 ::
+
 curl -X POST -F "file=@/path/to/file_test.csv" http://localhost:8000/pmdata/12345/
 
 
